@@ -12,7 +12,7 @@ __en orden descendente__
 ---
 ___
 ***
-![dragones hermanos](brothers.jpeg "dragones hermanos")
+![dragones hermanos](brothers.png "dragones hermanos")
 1. E01_tramos
 ````
 #include <iostream>
@@ -45,9 +45,11 @@ cout<<"el impuesto es de ", impuesto;
 }
 ````
 
+
 2. E02_Abecedario
 
 ````
+
 #include <iostream>
 using namespace std;
 int main(int argc, char const *argv[])
@@ -81,8 +83,10 @@ int main(int argc, char const *argv[])
         cout<<letra << "       ";
         letra= letra-1;
     }
+
         
     return 0;
+
 }
 ````
 
@@ -177,9 +181,12 @@ int main()
 //  tablas del 1 al 10
 #include <iostream>
 using namespace std;
+
 int main(int argc, char const *argv[])
 {
+
     int n,i;
+
     i=1;
       for ( i = 0; i < 100; i++)
       {
@@ -195,125 +202,21 @@ int main(int argc, char const *argv[])
     return 0;
 }
 ````
-<<<<<<< HEAD
-6. BreakContinue
-=======
-6. 06_BreakContinue
->>>>>>> ff7e5ad3417d96d545c69b5dd6e201d3442a104b
-   ````
-    #include<iostream>
-    using namespace std;
-    int main()
-    {
-    int n = 5;
-    for (int i = 0; i < 10; i++)
-    {
-     if (i == 6)
-     {
-        break;
-     } else{
-         cout << i << endl;
-       }
-       cout << "numero" << i <<endl;
-    }
-    cout << ". . . hecho" << endl;
-    return 0;
-   }
-
-   ````
-<<<<<<< HEAD
-7. Sumatoria
-=======
-7. 07_Sumatoria
->>>>>>> ff7e5ad3417d96d545c69b5dd6e201d3442a104b
-   ````
-     /objetivo: sumatoria
-     // debug
-     #include<iostream>
-     #include<stdio.h>
-     using namespace std;
-     int main (void){
-     int numero, i, sumatoria = 0;
-
-      printf("Ingresa un numero: ");
-      scanf("%d", &numero);
-
-     sumatoria = (numero * (numero + 1)) / 2;
-
-      printf("La sumatoria de 1 a %d es %d", numero, sumatoria);
-
-     return 0;
-    }
-
-   ````   
-<<<<<<< HEAD
-8. factorial
-=======
-8. 08_factorial
->>>>>>> ff7e5ad3417d96d545c69b5dd6e201d3442a104b
-    ````
-     #include <iostream>
-     using namespace std;
-     int main(){
-     int e=5;
-     int i=1;
-     while (e>=0)
-     {
-        if(e==0){
-            i=i*1;
-        }else{
-            i=i*e;
-        }
-        e--;
-     }
-     cout<<i;
-     return 0;
-     }     
-
-<<<<<<< HEAD
-    ````   
-=======
-    ````
-9. 09_UPA
-````
-#include<iostream>
-using namespace std;
-int main()
-{
-string cadena;
-cadena=cadena+"u";
-cout<< cadena<<endl;
-cadena=cadena+"p";
-cout<< cadena<<endl;
-cadena=cadena+"2";
-cout<< cadena<<endl;
-cadena=cadena+"1";
-cout<< cadena<<endl;
-cadena=cadena+"0";
-cout<< cadena<<endl;
-cadena=cadena+"6";
-cout<< cadena<<endl;
-cadena=cadena+"3";
-cout<< cadena<<endl;
-cadena=cadena+"5";
-cout<< cadena<<endl;
-}
-````
->>>>>>> ff7e5ad3417d96d545c69b5dd6e201d3442a104b
 >tareas
 ---
 <ol>
 <li>01_impuestos.cpp</li>
-````
 
-     #include <iostream>
-     using namespace std;
-     int main()
-     {
-     int renta, porcentaje;
-     float impuestoAPAgar;
+````
+#include <iostream>
+using namespace std;
+int main()
+{
+    int renta, porcentaje;
+    float impuestoAPAgar;
     cout << "Introduce el costo de tu renta: " << endl;
     cin >> renta;
+
    
     if (renta < 10000)
     {
@@ -338,16 +241,11 @@ cout<< cadena<<endl;
     impuestoAPAgar = renta * porcentaje / 100;
     cout << "impuesto en porcentaje es de: " << porcentaje << "%" << endl;
     cout << "El impuesto a pagar es de: $" << impuestoAPAgar << endl;
-    return 0;
-      }
-    ````
-<<<<<<< HEAD
-![impuesto](imimi.png "impuesto")
-![imp](im2.png "imp")
 
-=======
->>>>>>> ff7e5ad3417d96d545c69b5dd6e201d3442a104b
- <li>02_dinero.cpp</li>
+    return 0;
+}
+````
+<li>02_dinero.cpp</li>
 
 ````
 #include<iostream>
@@ -372,21 +270,20 @@ int main(){
     return 0;
 }
 ````
-<<<<<<< HEAD
-![rat](rat.png "ratio")
-=======
->>>>>>> ff7e5ad3417d96d545c69b5dd6e201d3442a104b
 <li>03_juegos.cpp</li>
 
 ````
 #include <iostream>
 using namespace std;
+
 int main(){
     int coE, edad; 
+
     cout<<"cual es la edad del cliente? "<<endl;
     cin>>edad;
     if (edad<0){
         cout<<"mire la data insertada porfavor"<<endl;
+
     }
     else{
         if (edad<4){
@@ -400,22 +297,21 @@ int main(){
         }
     cout<<"el precio del ticket es= $"<<coE<<endl;
     }
+
+
     return 0;
 }
 ````
-<<<<<<< HEAD
-![tic](tick1.png "ticket")
-![tic](tick2.png "ticket")
-=======
->>>>>>> ff7e5ad3417d96d545c69b5dd6e201d3442a104b
 <li>04_pizza.cpp</li>
 
 ````
 #include <iostream>
 using namespace std;
+
 int main()
 {
     int tp, iv, inv;
+
     cout << "Quieres una pizza vegetariana: \n 1=si 0=No  \n =";
     cin >> tp;
     if (tp == 1)
@@ -427,14 +323,17 @@ int main()
         cout << "=====================================================================" << endl;
         if (iv == 1)
         {
+
             cout << "tu pizza sera vegetariana con tofu" << endl;
         }
         else if (iv == 2)
         {
+
             cout << "vegetariana con pimientos en camino " << endl;
         }
         else
         {
+
             cout << "inserte datos correctos porfavor.";
         }
     }
@@ -467,24 +366,21 @@ int main()
         cout << "=====================================================================" << endl;
         cout << "inserte datos correctos client@.";
     }
+
     return 0;
 }
 ````
-<<<<<<< HEAD
-![piz](pi1.png "pizza")
-![piz](pi2.png "pizza")
-
-=======
->>>>>>> ff7e5ad3417d96d545c69b5dd6e201d3442a104b
 <li>05_temperatura.cpp</li>
 
 ````
 #include <iostream>
 using namespace std;
+
 int main()
 {
     int contador = 0;
     float teAc = 0, temperatura, tempM = -273, tempme = 100000;
+
     do
     {
         cout << "temperatura: ";
@@ -504,18 +400,16 @@ int main()
     cout << "la temperatura media es de: " << teAc / 6 << "°C" << endl;
     cout << "la mas baja temperatura es: " << tempme << "°C" << endl;
     cout << "la mas alta es: " << tempM << "°C" << endl;
+
     return 0;
 }
 ````
-<<<<<<< HEAD
-![tem](tem.png "temperatura")
-=======
->>>>>>> ff7e5ad3417d96d545c69b5dd6e201d3442a104b
 <li>06_fact.cpp</li>
 
 ````
 #include <iostream>
 using namespace std;
+
 int main()
 {
     int cdp;
@@ -533,46 +427,16 @@ int main()
         tf += (cdp*pdp);
     } while (cdp > 0);
     cout << "calculando el pago...bip...bip...\n costo total= $" << tf << endl;
+
     return 0;
 }
 ````
-<<<<<<< HEAD
-![pro](pro.jpeg "producto")
-=======
->>>>>>> ff7e5ad3417d96d545c69b5dd6e201d3442a104b
 <li>07_inte-bina.cpp</li>
 
 ````
 #include <iostream>
-<<<<<<< HEAD
-#include <string.h>
-#include <math.h>
 using namespace std;
-int main(){
-    char binario[30]="";
-    int decimal=0;
-    int numero=0;
-    int contador, i;
-    cout<<"Convertir numeros de binario a decimal \n";
-    cout<<"Ingresa un numero en binario: ";
-    cin>>binario;
-    contador=strlen(binario);
-    for (int i = 1; i <= contador; i++)
-    {
-        if (binario[i-1]=='1')
-        {
-            decimal=pow(2,contador-i);
-            numero=numero +decimal;
-        }
-        
-    }
-    cout<<numero;
-    return 0; 
-}
-````
-![bina](bina.jpeg "binario")
-=======
-using namespace std;
+
 int main(){
     int decimal;
     string resultado;
@@ -580,9 +444,11 @@ int main(){
         cout<<"agregue el decimal que quiere a binario : ";
         cin>>decimal;
         if(decimal>0){
+
         }
         else if(decimal==0){
             cout<<"su resultado es: 0"<<endl;
+
         }
         else{
             cout<<"error :(: ingrese un valor diferente a 0 "<<endl;
@@ -590,5 +456,4 @@ int main(){
     }while(decimal!=0);
 }
 ````
->>>>>>> ff7e5ad3417d96d545c69b5dd6e201d3442a104b
 </ol>
