@@ -1,20 +1,44 @@
-#include<conio.h>
-#include<stdio.h>
-#include<math.h>
+#include <iostream>
+#include <math.h>
+using namespace std;
 
-void main()
-{
-float ,s, c, t; /definir variables/
-Double x;
-clrscr(); /borrar pantalla/
-printf("Escribe un numero: "); /captura el valor del angulo/
-scanf("%d",&x); /lo guarda en x/
-s=sin(x*3.14159/180); /hallar seno en radianes es x por pi/180/
-c=cos(x*3.14159/180); /hallar coseno/
-t=tan(x*3.14159/180); /hallar tangente/
-printf("El seno = %.5f\t", s); /* el .5 son los decimales que quieres que tenga*/
-printf("El coseno = %.5f\t",c);
-printf("la tangente = %.5f\t", t);
-getch();
-return (0);
+double G2R(double g){
+    double r;
+    r=g*M_PI/180;
+    return r;
+}
+
+long int factorial(int x){
+    int factorial=1;
+    while (x>0)
+    {
+        factorial=factorial*x;
+        x--;
+    }
+    return factorial;
+}
+
+double coseno(double g, int i){
+    double c;
+    c=pow(-1,i)*pow(G2R(g),2*i)/(factorial(2*i));
+    return c;
+}
+
+int main(){
+    int g=45;
+    double x1=10;
+    double Es=0.00001;
+    double c=0;
+
+    double Er=x1-c;
+    int i=0;
+
+    while(Er>Es){
+        x1=c;
+        c=c+coseno(g,i);
+        Er=abs(x1-c);
+        i++;
+    }
+    cout<<"El coseno de "<<g<<" grados es: "<<c;
+    return 0;
 }

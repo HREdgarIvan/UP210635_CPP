@@ -1,14 +1,14 @@
 # Hola y bienvenido al repositorio 2
 ---
-<center>hola
+<center>good day
 
-bienvenido otra vez
+welcome again
 
 
-**Lista de trabajos**  
-__de la unidad 3__  
+**homeworks**  
+__unit 3__  
 
->lista
+>list
 ---
 ___
 ***
@@ -61,6 +61,8 @@ ___
     return 0;
  }
 ````
+![Alt bisseccion](bi.jpeg "bi")
+
 
 2. 02_grado a radian
 
@@ -91,51 +93,85 @@ int main()
     return 0;
 }
 ````
+![Alt radian](ra.jpg "radian")
+
 
 3. 03_anio bisiesto
 ````
  #include <iostream>
- using namespace std;
- int main()
- {
-   int anio;
+using namespace std;
 
-   //lectura por teclado del año
-   cout << "Introduce a"<<(char)164 <<"o: "; //164 ascii de ñ
-   cin >> anio;
+bool Bisiesto(int ano){
+    bool r;
+    r = ano%400==0 || ano%4==0 && ano%100!=0;
+    return r;
+}
 
-   if(a%4 == 0 and a%100 != 0 or a%400 == 0) //Condición de año bisiesto                                              
-      cout << "Bisiesto" << endl;
-   else
-      cout << "No es bisiesto" << endl;
+int main(){
+int ano;
+cout<<"Ingresa un anio: ";
+cin>>ano;
+if(Bisiesto(ano)){
+    cout<<ano<<" es bisiesto";
+} else{
+    cout<<ano<<" no es bisiesto";
+}
+return 0;
+}
 
-   system("pause"); 
- }
 ````
+![Alt anio](an.jpeg "anio")
+
 
 4. 04_Coseno
 ````
-#include<conio.h>
-#include<stdio.h>
-#include<math.h>
+ #include <iostream>
+ #include <math.h>
+ using namespace std;
 
-void main()
-{
-float ,s, c, t; /definir variables/
-Double x;
-clrscr(); /borrar pantalla/
-printf("Escribe un numero: "); /captura el valor del angulo/
-scanf("%d",&x); /lo guarda en x/
-s=sin(x*3.14159/180); /hallar seno en radianes es x por pi/180/
-c=cos(x*3.14159/180); /hallar coseno/
-t=tan(x*3.14159/180); /hallar tangente/
-printf("El seno = %.5f\t", s); /* el .5 son los decimales que quieres que tenga*/
-printf("El coseno = %.5f\t",c);
-printf("la tangente = %.5f\t", t);
-getch();
-return (0);
-}
+ double G2R(double g){
+    double r;
+    r=g*M_PI/180;
+    return r;
+ }
+
+ long int factorial(int x){
+    int factorial=1;
+    while (x>0)
+    {
+        factorial=factorial*x;
+        x--;
+    }
+    return factorial;
+ }
+
+ double coseno(double g, int i){
+    double c;
+    c=pow(-1,i)*pow(G2R(g),2*i)/(factorial(2*i));
+    return c;
+ }
+
+ int main(){
+    int g=45;
+    double x1=10;
+    double Es=0.00001;
+    double c=0;
+
+    double Er=x1-c;
+    int i=0;
+
+    while(Er>Es){
+        x1=c;
+        c=c+coseno(g,i);
+         Er=abs(x1-c);
+        i++;
+    }
+    cout<<"El coseno de "<<g<<" grados es: "<<c;
+    return 0;
+ }
 ````
+![Alt cos](co.jpg "baron")
+
 5. 05_Desgloce
 ````
 #include <iostream.h>
@@ -185,6 +221,9 @@ monedas_de_1=monedas_de_1%5;
 }
 
 ````
+![Alt des](de.jpeg "desglose")
+
+
 6. 06_Desviacion
 ````
   import statistics
@@ -223,6 +262,9 @@ using namespace std;
  }
 
    ````
+  ![Alt des](des.jpg "des")
+
+
 7. 07_Numeros Romanos
    ````
     #include <iostream> //  necesarios para el cin y cout 
@@ -295,8 +337,10 @@ using namespace std;
     }
 
   ````   
+  ![Alt roma](ro.jpeg "romano")
+
 8. 08_vector
-  **se toman valores consecutivos y sus intercambios solo deteniendose cuando ya se uso todos los numeros** 
+  **Consecutive values ​​are taken and their exchanges, only stopping when all the numbers have been used** 
 
     ````
     #include <iostream>
@@ -332,6 +376,8 @@ void Ordenar(int x[],int v){
    }    
 
  ````
+ 
+ ![Alt vector](vec.jpeg "vec")
 
 9. 09_recursividad
   ````
@@ -362,7 +408,7 @@ void Ordenar(int x[],int v){
 
    ````
 
- 10. 10_recursividad
+ 10. 10_rfc
   ````
  #include <iostream>
 #include <cstring>
@@ -378,7 +424,7 @@ int main(){
     int p=0;
     AP[0]=tolower(AP[0]);
     
-    for (int i = 0; i < v && p<2; i++)
+  for (int i = 0; i < v && p<2; i++)
     {
         if (AP[i]=='a' || AP[i]=='e' || AP[i]=='i' || AP[i]=='o' || AP[i]=='u' )
         {
@@ -388,18 +434,20 @@ int main(){
     }
     AP[0]=toupper(AP[0]);
 
-    int d1=fe.find_last_of("/");
+  int d1=fe.find_last_of("/");
     int d2=fe.find("/");
     rfc=rfc+AM[0]+nombre[0]+fe.substr(d1+1,4)+fe.substr(d2+1,2)+fe.substr(0,2);
     
-    v=rfc.length();
+  v=rfc.length();
     for (int i = 0; i < v; i++)
-    {
+     {
         rfc[i]=toupper(rfc[i]);
-    }
-    cout<<nombre<<" RFC: "<<rfc;
-    return 0;
-    }
+     }
+  cout<<nombre<<" RFC: "<<rfc;
+  return 0;
+     }
 
-   ````  
+ ````
+![Alt rfc](rfc.jpeg "rfc")
+  
 <ol>

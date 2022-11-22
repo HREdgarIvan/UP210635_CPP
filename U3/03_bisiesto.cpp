@@ -1,17 +1,20 @@
 #include <iostream>
 using namespace std;
-int main()
-{
-   int anio;
 
-   //lectura por teclado del año
-   cout << "Introduce a"<<(char)164 <<"o: "; //164 ascii de ñ
-   cin >> anio;
+bool Bisiesto(int ano){
+    bool r;
+    r = ano%400==0 || ano%4==0 && ano%100!=0;
+    return r;
+}
 
-   if(a%4 == 0 and a%100 != 0 or a%400 == 0) //Condición de año bisiesto                                              
-      cout << "Bisiesto" << endl;
-   else
-      cout << "No es bisiesto" << endl;
-
-   system("pause"); 
+int main(){
+int ano;
+cout<<"Ingresa ek anio: ";
+cin>>ano;
+if(Bisiesto(ano)){
+    cout<<ano<<" es bisiesto";
+} else{
+    cout<<ano<<" no debe ser bisiesto";
+}
+return 0;
 }
